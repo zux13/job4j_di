@@ -12,5 +12,13 @@ public class SpringDI {
         ui.add("Ivan ivanov");
         ui.addFromInput("What's your name?");
         ui.print();
+
+        System.out.println("---");
+
+        StartUI anotherUI = context.getBean(StartUI.class);
+        anotherUI.add("apple");
+        anotherUI.add("orange");
+        anotherUI.addFromInput("What's for lunch?");
+        anotherUI.print();
     }
 }
